@@ -69,7 +69,7 @@ function createCard(objcard) {
 					<h3 class="goods-title">${objcard.name}</h3>
 						<p class="goods-description">${objcard.description}</p>
 						<button class="button goods-card-btn add-to-cart" data-id="${objcard.id}">
-							<span class="button-price">${objcard.price} руб</span>
+							<span class="button-price">$ ${objcard.price}</span>
 						</button>
 	</div>
 	`;

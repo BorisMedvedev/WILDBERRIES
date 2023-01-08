@@ -224,5 +224,25 @@
   "price": "206",
   "category": "Accessories",
   "gender": "Mens"
+},
+{
+  "id": "023",
+  "img": "img/61qMUpjOx7L.jpg",
+  "name": "American Hat Makers Sierra Cowboy Hat",
+  "label": "new",
+  "description": "Handcrafted, Genuine Leather, Breathable / Latte",
+  "price": "100",
+  "category": "Accessories",
+  "gender": "Mens"
+},
+{
+  "id": "023",
+  "img": "img/61qMUpjOx7L.jpg",
+  "name": "American Hat Makers Sierra Cowboy Hat",
+  "label": "new",
+  "description": "Handcrafted, Genuine Leather, Breathable / Latte",
+  "price": "200",
+  "category": "Accessories",
+  "gender": "Mens"
 }
 ]
