@@ -48,7 +48,7 @@
 })();
 
 const more = document.querySelector(".more");
-const navigationItem = document.querySelectorAll(".navigation-item");
+const navigationLink = document.querySelectorAll(".navigation-link");
 const longGoodsList = document.querySelector(".long-goods-list");
 
 const getGoods = async function () {
@@ -84,6 +84,32 @@ function renderCards(data) {
 }
 
 more.addEventListener("click", function (el) {
+  el.preventDefault();
+  getGoods().then(renderCards);
+});
+
+function filterCards(field, value) {
+  getGoods()
+    .then(function (data) {
+      const filteredGoods = data.filter(function (good) {
+        return good[field] === value;
+      });
+      return filteredGoods;
+    })
+    .then(renderCards);
+}
+
+navigationLink.forEach((link) => {
+  link.addEventListener("click", (el) => {
+    el.preventDefault();
+    const field = link.dataset.field;
+    const value = link.textContent;
+    filterCards(field, value);
+  });
+});
+
+const allCards = document.querySelector(".all-cards");
+allCards.addEventListener("click", function (el) {
   el.preventDefault();
   getGoods().then(renderCards);
 });
