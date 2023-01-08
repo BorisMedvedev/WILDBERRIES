@@ -51,16 +51,16 @@ const more = document.querySelector(".more");
 const navigationLink = document.querySelectorAll(".navigation-link");
 const longGoodsList = document.querySelector(".long-goods-list");
 
-const getGoods = async function () {
+async function getGoods() {
   const resault = await fetch("./db/db.json");
   if (!resault.ok) {
     throw "ERROR" + resault.status;
   }
   return await resault.json();
-};
+}
 
 function createCard(objcard) {
-  const card = document.createElement("div");
+  const card = document.createElement("article");
   card.className = "col-lg-3 col-sm-6";
   card.innerHTML = `
 	<div class="goods-card">
