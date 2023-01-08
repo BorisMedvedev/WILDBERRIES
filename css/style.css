@@ -80,7 +80,7 @@ button {
 }
 
 .show-goods .long-goods {
-  display: none;
+  display: block;
 }
 
 .slide {
@@ -243,12 +243,16 @@ button {
 }
 
 .goods-card {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   position: relative;
   text-align: center;
   padding: 30px 35px 35px;
   min-height: 440px;
+  box-shadow: 0px 0px 33px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .goods-card .label {
@@ -353,7 +357,8 @@ button {
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 .overlay.show {
@@ -367,6 +372,8 @@ button {
   padding: 30px;
   overflow: scroll;
   position: relative;
+  z-index: 99;
+  cursor: auto;
 }
 
 .modal-header {
